@@ -1,0 +1,107 @@
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <style>
+      .page-box { fill: #BD95C5; stroke: #9F7BA8; stroke-width: 2; }
+      .flow-box { fill: #D4B3DA; stroke: #9F7BA8; stroke-width: 2; }
+      .utility-box { fill: #F9F8F6; stroke: #9D9C98; stroke-width: 2; }
+      .text-main { fill: #3E3D35; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; }
+      .text-small { fill: #3E3D35; font-family: 'Inter', sans-serif; font-size: 12px; }
+      .arrow { stroke: #3E3D35; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .anchor-line { stroke: #9D9C98; stroke-width: 2; fill: none; stroke-dasharray: 5,5; marker-end: url(#arrowhead-gray); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#3E3D35" />
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#9D9C98" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" class="text-main" font-size="18">Mapa de Navegación - Isabelle's Permanent Make-Up</text>
+  
+  <!-- Level 1: Home -->
+  <rect x="475" y="60" width="250" height="60" rx="8" class="page-box"/>
+  <text x="600" y="85" text-anchor="middle" class="text-main">HOME</text>
+  <text x="600" y="105" text-anchor="middle" class="text-small">(Página principal)</text>
+  
+  <!-- Level 2: Main sections -->
+  <!-- Productos -->
+  <rect x="100" y="180" width="200" height="50" rx="8" class="page-box"/>
+  <text x="200" y="210" text-anchor="middle" class="text-main">PRODUCTOS</text>
+  
+  <!-- Servicios -->
+  <rect x="350" y="180" width="200" height="50" rx="8" class="page-box"/>
+  <text x="450" y="210" text-anchor="middle" class="text-main">SERVICIOS</text>
+  
+  <!-- Contactar (anchor) -->
+  <rect x="600" y="180" width="200" height="50" rx="8" class="utility-box"/>
+  <text x="700" y="205" text-anchor="middle" class="text-main">CONTACTAR</text>
+  <text x="700" y="220" text-anchor="middle" class="text-small" font-size="10">(ancla a sección en Home)</text>
+  
+  <!-- Reservar cita -->
+  <rect x="850" y="180" width="200" height="50" rx="8" class="page-box"/>
+  <text x="950" y="210" text-anchor="middle" class="text-main">RESERVAR CITA</text>
+  
+  <!-- Arrows from Home to sections -->
+  <path d="M 525 120 L 200 180" class="arrow"/>
+  <path d="M 560 120 L 450 180" class="arrow"/>
+  <path d="M 650 120 L 700 180" class="anchor-line"/>
+  <path d="M 675 120 L 950 180" class="arrow"/>
+  
+  <!-- Level 3: Booking flow -->
+  <rect x="850" y="280" width="200" height="50" rx="8" class="flow-box"/>
+  <text x="950" y="305" text-anchor="middle" class="text-main">1. Elegir servicio</text>
+  
+  <rect x="850" y="360" width="200" height="50" rx="8" class="flow-box"/>
+  <text x="950" y="385" text-anchor="middle" class="text-main">2. Elegir día y hora</text>
+  
+  <rect x="850" y="440" width="200" height="70" rx="8" class="flow-box"/>
+  <text x="950" y="465" text-anchor="middle" class="text-main">3. Rellenar formulario</text>
+  <text x="950" y="485" text-anchor="middle" class="text-small">Comprobación de errores</text>
+  
+  <rect x="850" y="540" width="200" height="70" rx="8" class="flow-box"/>
+  <text x="950" y="565" text-anchor="middle" class="text-main">Confirmación</text>
+  <text x="950" y="585" text-anchor="middle" class="text-small">+ botón contacto / inicio</text>
+  
+  <!-- Arrows in booking flow -->
+  <path d="M 950 230 L 950 280" class="arrow"/>
+  <path d="M 950 330 L 950 360" class="arrow"/>
+  <path d="M 950 410 L 950 440" class="arrow"/>
+  <path d="M 950 510 L 950 540" class="arrow"/>
+  
+  <!-- Footer utility pages -->
+  <text x="250" y="680" text-anchor="middle" class="text-main">Páginas de utilidad (accesibles desde Footer)</text>
+  
+  <rect x="50" y="710" width="180" height="50" rx="8" class="utility-box"/>
+  <text x="140" y="740" text-anchor="middle" class="text-main">Aviso legal</text>
+  
+  <rect x="260" y="710" width="180" height="50" rx="8" class="utility-box"/>
+  <text x="350" y="740" text-anchor="middle" class="text-main">Política de privacidad</text>
+  
+  <rect x="470" y="710" width="180" height="50" rx="8" class="utility-box"/>
+  <text x="560" y="740" text-anchor="middle" class="text-main">Política de cookies</text>
+  
+  <!-- Arrows from Home to footer pages -->
+  <path d="M 550 120 L 140 710" class="anchor-line"/>
+  <path d="M 575 120 L 350 710" class="anchor-line"/>
+  <path d="M 600 120 L 560 710" class="anchor-line"/>
+  
+  <!-- Legend -->
+  <rect x="50" y="820" width="30" height="20" rx="4" class="page-box"/>
+  <text x="90" y="835" class="text-small">Página principal</text>
+  
+  <rect x="250" y="820" width="30" height="20" rx="4" class="flow-box"/>
+  <text x="290" y="835" class="text-small">Flujo de reserva</text>
+  
+  <rect x="450" y="820" width="30" height="20" rx="4" class="utility-box"/>
+  <text x="490" y="835" class="text-small">Utilidad / Ancla</text>
+  
+  <line x1="650" y1="830" x2="680" y2="830" class="arrow"/>
+  <text x="690" y="835" class="text-small">Navegación directa</text>
+  
+  <line x1="850" y1="830" x2="880" y2="830" class="anchor-line"/>
+  <text x="890" y="835" class="text-small">Ancla / Footer</text>
+  
+</svg>

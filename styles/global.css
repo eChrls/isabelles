@@ -1,0 +1,1258 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Variables globales del sistema */
+:root {
+  --rosa: #bd95c5;
+  --rosa-hover: #9f7ba8;
+  --fondo: #f9f8f6;
+  --blanco: #ffffff;
+  --negro: #3b3a32;
+  --rojo: #8f1010;
+  --gris: #9d9c98;
+  --gris-hover: #d9d9d9;
+  --w-content-md: 320px;
+  --w-content-sm: 300px;
+  --w-form: 335px;
+  --titulo: "Cormorant", Georgia, serif;
+  --texto: "Inter", Arial, sans-serif;
+  --fs-16: 16px;
+  --gap-8: 8px;
+  --gap-16: 16px;
+  --gap-24: 24px;
+  --header-h: 72px;
+  --focus-outline: 2px solid var(--rosa-hover);
+}
+
+/* Reset base y tipografia global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  font-family: var(--texto);
+  font-size: var(--fs-16);
+  line-height: var(--lh-24);
+  color: var(--negro);
+  background-color: var(--fondo);
+  min-height: 100vh;
+}
+
+body.fondoSuave {
+  background-color: #f3f1ed;
+}
+
+body.reservaPage4 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.reservaPage4 .catalogPage.hasBottomNav {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--texto);
+  border: none;
+  background: none;
+}
+
+input,
+select,
+textarea {
+  color: var(--negro);
+}
+
+h1,
+h2 {
+  font-family: var(--titulo);
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+p {
+  font-size: var(--fs-16);
+  line-height: 24px;
+}
+
+/* Utilidades */
+.lh-20 {
+  line-height: 20px;
+}
+
+.lh-24 {
+  line-height: 24px;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+/*layout */
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fd-col {
+  flex-direction: column;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-start {
+  align-items: flex-start;
+}
+
+.ai-baseline {
+  align-items: baseline;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.gap-2 {
+  gap: 2px;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+
+.gap-8 {
+  gap: var(--gap-8);
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-12 {
+  gap: 12px;
+}
+
+.gap-16 {
+  gap: var(--gap-16);
+}
+
+.gap-18 {
+  gap: 18px;
+}
+
+.gap-32 {
+  gap: 32px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mt-6 {
+  margin-top: 6px;
+}
+
+.minh-52 {
+  min-height: 52px;
+}
+
+.txt-sec {
+  color: #9d9c98;
+}
+
+.icon-30-flex {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+}
+
+/* Componentes */
+.txt-titulo-24 {
+  font-family: var(--titulo);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.txt-titulo-16 {
+  font-family: var(--titulo);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.txt-16 {
+  font-family: var(--texto);
+  font-size: 16px;
+}
+
+.txt-14 {
+  font-family: var(--texto);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.h2-catalog {
+  text-align: center;
+}
+
+.iconos-redes {
+  justify-content: flex-start;
+  width: 100%;
+  gap: var(--gap-8);
+}
+
+.link-menu:hover {
+  color: var(--rosa-hover);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-8);
+  min-height: 44px;
+  padding: 0 var(--gap-24);
+  border-radius: 10px;
+  font-family: var(--texto);
+  font-size: var(--fs-16);
+  line-height: 20px;
+  font-weight: 400;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn-rosa {
+  background-color: var(--rosa);
+  color: var(--negro);
+  border: 2px solid var(--rosa);
+}
+
+.btn-rosa:hover {
+  background-color: var(--rosa-hover);
+  border-color: var(--rosa-hover);
+}
+
+.icon-15 {
+  width: 15px;
+  height: 15px;
+}
+
+.icon-30 {
+  width: 30px;
+  height: 30px;
+}
+
+:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Header principal y menu desplegable */
+#header {
+  position: sticky;
+  top: 0;
+  background-color: var(--fondo);
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-backdrop {
+  display: none;
+}
+
+#cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: var(--header-h);
+  padding-inline: 8px;
+}
+
+#logo,
+#btn-reservar,
+.logoSimple {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hamburguesa {
+  display: inline-flex;
+  align-items: center;
+}
+
+#hamburguesa img {
+  width: 24px;
+  height: 38px;
+}
+
+#logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#logo img {
+  width: 240px;
+  height: 72px;
+}
+
+#btn-reservar {
+  flex-direction: column;
+  width: 63px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 4px;
+  gap: 1px;
+  border-radius: 10px;
+  font-size: 10px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.btnReservarHeaderLabelDesktop {
+  display: none;
+}
+
+.btnReservarHeaderLabelMobile {
+  display: inline;
+}
+
+#btn-reservar img {
+  width: 15px;
+  height: 15px;
+}
+
+#hamburguesa,
+#btn-reservar {
+  position: relative;
+  z-index: 1;
+}
+
+#menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: var(--header-h);
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: var(--fondo);
+  border-top: 1px solid #f0efed;
+  padding: var(--gap-16);
+  gap: var(--gap-16);
+}
+
+#menu-toggle:checked ~ #cabecera {
+  display: none;
+}
+
+#menu-toggle:checked ~ #menu-backdrop {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(59, 58, 50, 0.35);
+  z-index: 20;
+}
+
+#menu-toggle:checked ~ #menu {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  min-width: 300px;
+  max-width: 40%;
+  min-height: 100vh;
+  overflow-y: auto;
+  z-index: 30;
+}
+
+#menu-logo img {
+  width: 270px;
+  height: 65px;
+}
+
+#menu-logo {
+  display: block;
+  width: 270px;
+  padding: 16px 24px;
+}
+
+#menu-lista li a {
+  display: block;
+  padding-block: var(--gap-16);
+  border-bottom: 1px solid #f0efed;
+}
+
+#menu-idioma {
+  display: grid;
+  grid-template-columns: 1fr 22px;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  row-gap: 6px;
+}
+
+#menu-idioma::before {
+  content: "Idioma";
+  display: block;
+  font-family: var(--titulo);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: var(--negro);
+  grid-column: 1;
+  grid-row: 1;
+  padding-block: var(--gap-16);
+  border-bottom: 1px solid #f0efed;
+}
+
+#menu-idioma::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 15px;
+  background-image: url("../assets/gallery/icons/abajo-rosa-hover.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-self: end;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#menu-idioma li {
+  grid-column: 1 / -1;
+}
+
+#menu-idioma li a {
+  padding-block: var(--gap-8);
+}
+
+#menu > a.btn-rosa {
+  width: 250px;
+  min-height: 44px;
+  padding: 0 12px;
+  justify-content: center;
+  text-align: center;
+}
+
+#menu > a.btn-rosa img {
+  width: 15px;
+  height: 15px;
+}
+
+#menu-redes {
+  width: 100%;
+  padding: 16px 0;
+}
+
+#menu-redes li a {
+  min-height: 36px;
+  padding-left: 8px;
+  padding-block: var(--gap-8);
+  text-align: left;
+}
+
+/* Secciones visuales de portada */
+.section {
+  width: 100vw;
+  min-height: 611px;
+  margin: 0;
+  padding: 17px 0 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgMp {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.imgMp-welcome {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("../assets/gallery/images/FOTODE~4.WEBP");
+}
+
+.imgMp-products {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("../assets/gallery/images/section2-unplash-free-license.webp");
+}
+
+.imgMp-service-1 {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("../assets/gallery/images/servicio-unplash-free-license.webp");
+}
+
+.imgMp-service-2 {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("../assets/gallery/images/Foto-de-Kerim-Eveyik-httpswww.pexels.comes-esfotomujer-pincel-cepillo-cepillar-22589363.webp");
+}
+
+.imgMp-expertos {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("../assets/gallery/images/Foto-de-Anna-Shvets-httpswww.pexels.comes-esfotomanos-mujer-tecnologia-cara-4586745.webp");
+}
+
+.titleMp {
+  min-height: 119px;
+  width: 100%;
+  text-align: center;
+}
+
+.textMp {
+  width: 305px;
+  min-height: 60px;
+  margin-top: 0;
+}
+
+.btnMp {
+  width: 250px;
+  min-height: 44px;
+  margin-top: auto;
+  border: 1px solid var(--negro);
+  background-color: var(--negro);
+  color: #ffffff;
+  font-family: var(--titulo);
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* Bloque de contacto */
+.sectionContact {
+  width: 100%;
+  min-height: 555px;
+  margin: 0 auto;
+  padding: 32px var(--gap-24) 24px;
+  background-color: var(--fondo);
+}
+
+.contactTop {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.contactMp {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: var(--texto);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.btnContact {
+  width: 166px;
+  min-height: 40px;
+  margin: 8px auto 0;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: var(--rosa);
+  color: var(--negro);
+  font-family: var(--texto);
+  font-size: 14px;
+  line-height: 16px;
+  gap: 8px;
+}
+
+.btnContact img {
+  width: 13px;
+  height: 13px;
+}
+
+.contactList {
+  margin-top: 28px;
+}
+
+.contactItem {
+  padding-left: 8px;
+}
+
+.contactLabel {
+  color: var(--rosa-hover);
+  text-transform: uppercase;
+}
+
+/* Footer compartido */
+.footerMp {
+  width: 100%;
+  min-height: 198px;
+  margin: 0 auto;
+  padding: 24px var(--gap-24);
+  background-color: var(--negro);
+  color: var(--blanco);
+  gap: 8px;
+  text-align: center;
+}
+
+.footerCopy {
+  color: var(--blanco);
+}
+
+.footerLink {
+  color: var(--blanco);
+  text-decoration: underline;
+}
+
+.hasBottomNav + .bottomNav + .footerMp {
+  padding-bottom: 96px;
+}
+
+body.reservaPage2 .hasBottomNav + .bottomNav + .footerMp {
+  padding-bottom: 76px;
+}
+
+body.reservaPage3 .hasBottomNav + .bottomNav + .footerMp {
+  padding-bottom: 52px;
+}
+
+body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
+  padding-bottom: 44px;
+}
+
+.hasBottomNav {
+  padding-bottom: 72px;
+}
+
+/* Navegacion inferior fija */
+.bottomNav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 0;
+  background-color: rgba(249, 248, 246, 0.5);
+}
+
+.bottomNavList {
+  width: min(100%, 375px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.bottomNavBtn {
+  width: 153px;
+  height: 46px;
+  padding: 8px 8px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-family: var(--titulo);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--negro);
+  gap: 6px;
+}
+
+.bottomNavBtnWideText {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.bottomNavBtnWideText span {
+  width: 100%;
+  text-align: center;
+}
+
+.bottomNavBtnLight {
+  background-color: var(--blanco);
+  border-color: var(--gris-hover);
+}
+
+.bottomNavBtnPink {
+  background-color: var(--rosa);
+  border-color: transparent;
+}
+
+.bottomNavIcon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+
+.bottomNavIconSm {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+}
+
+/* Cabecera simple para paginas internas */
+.headerSimple {
+  width: 100%;
+  min-height: 100px;
+  margin: 0 auto;
+  background-color: var(--blanco);
+}
+
+.logoSimple img {
+  width: 288px;
+  height: 86px;
+}
+
+.catalogPage {
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px var(--gap-24) 40px;
+  background-color: transparent;
+}
+
+/* Flujo de reservas */
+.formStepIntro {
+  width: min(100%, var(--w-content-md));
+  margin: 0 auto;
+}
+
+.formServicios {
+  width: min(100%, var(--w-content-sm));
+  margin: 24px auto 0;
+  border: none;
+}
+
+.formServiciosOption,
+.calDiaOption,
+.horarioOption {
+  position: relative;
+}
+
+.formServiciosRadio,
+.calDiaRadio,
+.horarioRadio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.formServiciosCard {
+  min-height: 116px;
+  padding: 18px;
+  border: 1px solid #cecac4;
+  border-radius: 12px;
+  background-color: var(--blanco);
+}
+
+.formServiciosThumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 0 0 80px;
+}
+
+.formServiciosRadio:checked + .formServiciosCard {
+  border-color: var(--rosa-hover);
+  background-color: var(--gris);
+}
+
+.calendarioReserva {
+  width: min(100%, var(--w-content-sm));
+  margin: 24px auto 0;
+}
+
+.calSemana,
+.calGrid {
+  width: 297px;
+  margin: 10px auto 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calDiaOption {
+  min-height: 45px;
+}
+
+.calDiaVacio {
+  min-height: 45px;
+}
+
+.calDiaLabel {
+  min-height: 45px;
+  border: 1px solid var(--fondo);
+  border-radius: 8px;
+  background-color: var(--fondo);
+  color: var(--negro);
+  text-align: center;
+}
+
+.calDiaLabelNoDisponible {
+  background-color: #e7e4de;
+}
+
+.calDiaRadio:checked + .calDiaLabel {
+  background-color: var(--rosa-hover);
+  border-color: #9f7ba8;
+  color: var(--blanco);
+}
+
+.formServiciosRadio:focus-visible + .formServiciosCard,
+.calDiaRadio:focus-visible + .calDiaLabel,
+.horarioRadio:focus-visible + .horarioLabel {
+  outline: var(--focus-outline);
+  outline-offset: 1px;
+}
+
+.horariosReserva {
+  width: min(100%, var(--w-content-md));
+  margin: 24px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--gris-hover);
+}
+
+.horariosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.horarioLabel {
+  border: 1px solid var(--gris-hover);
+  border-radius: 8px;
+  padding: 15px 13px;
+  background-color: transparent;
+  color: var(--negro);
+  text-align: center;
+}
+
+.horarioRadio:checked + .horarioLabel {
+  background-color: var(--rosa-hover);
+  border-color: var(--rosa-hover);
+  color: var(--blanco);
+}
+
+.horarioNoDisponible {
+  padding: 15px 13px;
+  border-radius: 8px;
+  background-color: #e7e4de;
+  color: var(--gris);
+  text-align: center;
+  text-decoration: line-through;
+}
+
+.carrusel {
+  width: min(100%, var(--w-content-md));
+  margin: 22px auto 0;
+}
+
+.carruselItem {
+  width: 70px;
+}
+
+.reservaDatos {
+  width: min(100%, var(--w-form));
+  margin: 24px auto 0;
+}
+
+.reservaDatosInput,
+.reservaDatosTextarea {
+  border: 1px solid var(--gris-hover);
+  border-radius: 8px;
+  background-color: var(--fondo);
+  color: var(--negro);
+  padding: 15px 13px;
+}
+
+.reservaDatosTextarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.reservaDatosInput::placeholder,
+.reservaDatosTextarea::placeholder {
+  color: #9d9c98;
+}
+
+.reservaDatosInput:focus-visible,
+.reservaDatosTextarea:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 1px;
+}
+
+.reservaDatosError {
+  display: none;
+  color: #8f1010;
+}
+
+.reservaDatosInput:user-invalid,
+.reservaDatosTextarea:user-invalid,
+.reservaDatosInput[type="email"]:invalid:not(:placeholder-shown) {
+  border-color: var(--rojo);
+}
+
+.reservaDatosInput:user-invalid + .reservaDatosError,
+.reservaDatosTextarea:user-invalid + .reservaDatosError {
+  display: block;
+}
+
+.reservaDatosInput[type="email"]:invalid:not(:placeholder-shown)
+  + .reservaDatosError {
+  display: block;
+  color: var(--rojo);
+}
+
+.reservaDatosCheck {
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.reservaDatosCheckInput {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--rosa-hover);
+  flex: 0 0 16px;
+}
+
+.reservaDatosCheckLink {
+  color: var(--rosa);
+}
+
+.reservaDatosCheckInput:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+.reservaDatosCheckInput:user-invalid {
+  outline: 2px solid var(--rojo);
+  outline-offset: 2px;
+}
+
+.reservaConfirmacion {
+  width: min(100%, var(--w-form));
+  margin: 22px auto 0;
+}
+
+.reservaConfirmacionIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.reservaConfirmacionText {
+  margin-top: 8px;
+}
+
+.reservaResumenCard {
+  width: var(--w-form);
+  min-height: 245px;
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid var(--gris-hover);
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+.reservaResumenValue {
+  color: var(--rosa-hover);
+  text-align: right;
+}
+
+/* Paginas legales */
+.legalPage {
+  padding-top: 24px;
+}
+
+.h1Legal {
+  text-align: center;
+  font-family: var(--titulo);
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.legalTextBlock {
+  width: 70%;
+  min-width: var(--w-content-md);
+  min-height: 1001px;
+  margin: 57px auto 0;
+  padding: 24px 22px;
+  border-radius: 6px;
+  background-color: var(--gris);
+}
+
+.legalText {
+  font-family: var(--texto);
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+.legalText + .legalText {
+  margin-top: 14px;
+}
+
+/* Catalogo de productos y servicios */
+.catalogCards {
+  margin-top: 10px;
+}
+
+.catalogCard {
+  width: min(100%, var(--w-content-sm));
+}
+
+.catalogCard .catalogSubtitle {
+  text-transform: uppercase;
+}
+
+.catalogCardImg,
+.catalogCardImgVertical {
+  min-width: var(--w-content-md);
+  width: 80%;
+  height: auto;
+}
+
+.catalogCardImg {
+  margin-top: 12px;
+  object-fit: cover;
+}
+
+/* Ajustes responsive tablet */
+@media (min-width: 768px) {
+  .icon-15 {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bottomNavIconSm {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+  }
+
+  .bottomNavIcon {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+  }
+
+  #hamburguesa img {
+    width: 36px;
+    height: 56px;
+  }
+
+  #btn-reservar {
+    width: auto;
+    min-width: 146px;
+    padding: 0 12px;
+    gap: 8px;
+    flex-direction: row;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #btn-reservar img {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+  }
+
+  .btnReservarHeaderLabelMobile {
+    display: none;
+  }
+
+  .btnReservarHeaderLabelDesktop {
+    display: inline;
+    font-family: var(--texto);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  #menu > a.btn-rosa img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bottomNavBtn {
+    width: 266px;
+    height: 50px;
+    min-height: 48px;
+    border-radius: 4px;
+    padding: 15px 29px;
+    gap: 8px;
+    border-width: 1px;
+  }
+
+  .formServicios {
+    width: min(100%, 340px);
+  }
+
+  .sectionContact {
+    width: 100%;
+    max-width: 768px;
+    min-height: 352px;
+    padding: 32px 24px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    column-gap: 10rem;
+    align-items: start;
+  }
+
+  .contactTop {
+    min-height: 288px;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .btnContact {
+    margin: 14px auto 0;
+  }
+
+  .contactList {
+    margin-top: 0;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .contactItem {
+    padding-left: 0;
+  }
+
+  .catalogCards {
+    width: 100%;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .catalogCard {
+    width: 58vw;
+    max-width: 560px;
+    min-width: 340px;
+  }
+
+  .catalogCardImg,
+  .catalogCardImgVertical {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footerMp {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footerCopy {
+    flex: 0 0 100%;
+    margin-bottom: 2px;
+  }
+
+  .footerLink {
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body:is(.reservaPage2, .reservaPage3, .reservaPage4)
+    :is(
+      .formStepIntro,
+      .carrusel,
+      .calendarioReserva,
+      .horariosReserva,
+      .reservaDatos,
+      .reservaConfirmacion
+    ) {
+    min-width: var(--w-content-md);
+    width: 80%;
+  }
+
+  body.reservaPage2 :is(.calSemana, .calGrid) {
+    min-width: var(--w-content-md);
+    width: 70%;
+  }
+
+  body.reservaPage4 .reservaResumenCard {
+    min-width: var(--w-content-md);
+    width: 70%;
+    max-width: 100%;
+  }
+}

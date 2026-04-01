@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserva 3 | Isabelle's Permanent Make-Up</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+  </head>
+  <body class="fondoSuave reservaPage3">
+    <header class="headerSimple flex-center">
+      <a href="../index.html" class="logoSimple" aria-label="Ir a inicio">
+        <img
+          src="../assets/gallery/icons/Logo-Isabelles.svg"
+          alt="Isabelle's Permanent Make-Up"
+        />
+      </a>
+    </header>
+
+    <main class="catalogPage hasBottomNav" aria-label="Reserva paso 3">
+      <section
+        class="formStepIntro d-flex fd-col ai-center ta-center"
+        aria-label="Introduccion reserva paso 3"
+      >
+        <p class="txt-sec txt-14">PASO 3 DE 4</p>
+        <h1 class="formStepTitle mt-6">Tus Datos</h1>
+        <p class="formStepText mt-6 txt-sec txt-14">
+          Completa la informacion para confirmar reserva
+        </p>
+      </section>
+
+      <section class="carrusel" aria-label="Progreso de reserva">
+        <div class="d-flex jc-between ai-start">
+          <div class="carruselItem d-flex fd-col ai-center gap-8">
+            <img
+              src="../assets/gallery/icons/Icono-ok.svg"
+              alt="Paso 1 completado"
+              class="icon-30-flex"
+            />
+            <p class="txt-sec txt-14 ta-center">Servicio</p>
+          </div>
+          <div class="carruselItem d-flex fd-col ai-center gap-8">
+            <img
+              src="../assets/gallery/icons/Icono-ok.svg"
+              alt="Paso 2 completado"
+              class="icon-30-flex"
+            />
+            <p class="txt-sec txt-14 ta-center">Fecha</p>
+          </div>
+          <div class="carruselItem d-flex fd-col ai-center gap-8">
+            <img
+              src="../assets/gallery/icons/numero-3-rosa.svg"
+              alt="Paso 3 actual"
+              class="icon-30-flex"
+            />
+            <p class="txt-sec txt-14 ta-center">Datos</p>
+          </div>
+          <div class="carruselItem d-flex fd-col ai-center gap-8">
+            <img
+              src="../assets/gallery/icons/numero-4-negro.svg"
+              alt="Paso 4 pendiente"
+              class="icon-30-flex"
+            />
+            <p class="txt-sec txt-14 ta-center">Confirmar</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reservaDatos" aria-label="Formulario de contacto">
+        <form
+          id="reserva-datos-form"
+          class="d-flex fd-col gap-18"
+          action="reservas-4.html"
+          method="post"
+        >
+          <div class="d-flex fd-col gap-8">
+            <label class="reservaDatosLabel txt-14" for="reserva-nombre"
+              >Nombre Completo *</label
+            >
+            <input
+              id="reserva-nombre"
+              class="reservaDatosInput w-100 minh-52 txt-16 lh-20 fw-400"
+              type="text"
+              name="nombre"
+              placeholder="Escribe tu nombre completo"
+              autocomplete="name"
+              required
+            />
+            <p class="reservaDatosError txt-14">Campo obligatorio</p>
+          </div>
+
+          <div class="d-flex fd-col gap-8">
+            <label class="reservaDatosLabel txt-14" for="reserva-email"
+              >Email *</label
+            >
+            <input
+              id="reserva-email"
+              class="reservaDatosInput w-100 minh-52 txt-16 lh-20 fw-400"
+              type="email"
+              name="email"
+              placeholder="nombre@email.com"
+              autocomplete="email"
+              required
+            />
+            <p class="reservaDatosError txt-14">Introduzca un email valido</p>
+          </div>
+
+          <div class="d-flex fd-col gap-8">
+            <label class="reservaDatosLabel txt-14" for="reserva-telefono"
+              >Telefono / WhatsApp *</label
+            >
+            <input
+              id="reserva-telefono"
+              class="reservaDatosInput w-100 minh-52 txt-16 lh-20 fw-400"
+              type="tel"
+              name="telefono"
+              placeholder="Ej: 600 123 123"
+              autocomplete="tel"
+              required
+            />
+            <p class="reservaDatosError txt-14">Campo obligatorio</p>
+          </div>
+
+          <div class="d-flex fd-col gap-8">
+            <label class="reservaDatosLabel txt-14" for="reserva-mensaje"
+              >Mensaje (Opcional)</label
+            >
+            <textarea
+              id="reserva-mensaje"
+              class="reservaDatosTextarea w-100 txt-16 lh-20 fw-400"
+              name="mensaje"
+              placeholder="Cuentanos cualquier detalle importante..."
+              rows="4"
+            ></textarea>
+          </div>
+
+          <div class="reservaDatosCheck d-flex ai-start gap-10">
+            <input
+              id="reserva-privacidad"
+              class="reservaDatosCheckInput"
+              type="checkbox"
+              name="privacidad"
+              required
+            />
+            <label
+              class="reservaDatosCheckLabel txt-14"
+              for="reserva-privacidad"
+            >
+              Acepto la
+              <a
+                class="reservaDatosCheckLink txt-14 fw-700"
+                href="privacidad.html"
+                >politica de privacidad</a
+              >
+              y el tratamiento de mis datos personales.
+            </label>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <nav class="bottomNav" aria-label="Navegacion inferior">
+      <div class="bottomNavList">
+        <a
+          href="reservas-2.html"
+          class="flex-center bottomNavBtn bottomNavBtnLight"
+        >
+          <img
+            src="../assets/gallery/icons/flecha-negro.svg"
+            alt="next"
+            class="bottomNavIconSm"
+            width="15"
+            height="15"
+          />
+          <span>ANTERIOR</span>
+        </a>
+        <button
+          type="submit"
+          form="reserva-datos-form"
+          class="flex-center bottomNavBtn bottomNavBtnPink bottomNavBtnWideText"
+          aria-label="Confirmar reserva"
+        >
+          <span>CONFIRMAR RESERVA</span>
+        </button>
+      </div>
+    </nav>
+
+    <footer class="footerMp d-flex fd-col ai-center jc-center">
+      <p class="footerCopy txt-14">
+        &copy; 2025 Isabelle's Permanent Make-Up.<br />
+        Todos los derechos<br />
+        reservados.
+      </p>
+      <a href="privacidad.html" class="footerLink txt-14"
+        >Politica de privacidad</a
+      >
+      <a href="legal.html" class="footerLink txt-14">Aviso legal</a>
+      <a href="cookies.html" class="footerLink txt-14">Politica de cookies</a>
+    </footer>
+  </body>
+</html>
