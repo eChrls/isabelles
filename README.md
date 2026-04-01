@@ -4,6 +4,12 @@
 
 En el diseño de esta web se ha tratado de organizar y refactorizar siguiendo la filosofía "Clean Code" y buenas prácticas aprendidas en IDB Projects por el jefe de Departamento de Diseño, en el que organizamos un Sistema de Variables jerarquizadas, creación de utilidades, componentes y refactorización de código duplicado.
 
+El diseño de esta web es una migración fiel, dato a dato, del prototipo generado en Figma : 
+
+https://www.figma.com/proto/1Ma1hDGLYtjW2dEPHNAcVO/Isabelle%C2%B4s-Proyecto-Final?node-id=0-1&t=EX9OuH3rrgw1CJOc-1
+
+En el directorio 'assets' de este proyecto se puede encontrar toda la documentación, guía de estilos, imágenes, iconos y thumbnails usados en la web. Además de la fuente bibliográfica en el nombre.
+
 En esta web se ha garantizado:
 
 - El estándar de accesibilidad AA WCAG.
