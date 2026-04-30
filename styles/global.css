@@ -125,6 +125,14 @@ p {
   font-weight: 700;
 }
 
+.ffTitle {
+  font-family: var(--titulo);
+}
+
+.ffText {
+  font-family: var(--texto);
+}
+
 /*layout */
 .d-flex {
   display: flex;
@@ -773,6 +781,9 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
   min-height: 100px;
   margin: 0 auto;
   background-color: var(--blanco);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .logoSimple img {
@@ -819,6 +830,13 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
   border: 1px solid #cecac4;
   border-radius: 12px;
   background-color: var(--blanco);
+}
+
+.formServiciosTitle {
+  font-family: var(--titulo);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
 }
 
 .formServiciosThumb {
@@ -1242,17 +1260,14 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
     align-items: center;
   }
 
-  body:is(.reservaPage2, .reservaPage3, .reservaPage4)
-    :is(
-      .formStepIntro,
-      .carrusel,
-      .calendarioReserva,
-      .horariosReserva,
-      .reservaDatos,
-      .reservaConfirmacion
-    ) {
-    min-width: var(--w-content-md);
-    width: 80%;
+  .formStepIntro,
+  .carrusel,
+  .calendarioReserva,
+  .horariosReserva,
+  .reservaDatos,
+  .reservaConfirmacion {
+    width: min(90%, 600px);
+    margin-inline: auto;
   }
 
   body.reservaPage2 :is(.calSemana, .calGrid) {
@@ -1268,12 +1283,13 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
 }
 /* Ajustes responsive escritorio */
 @media (min-width: 1024px) {
+  /*header*/
   div#cabecera > label,
   a#logo,
   a#btn-reservar {
     display: none;
   }
-
+  /*nav en relative y ul del nav en absolute para conseguir centro perfecto*/
   header#header > div#cabecera > #nav-desktop {
     position: relative;
     justify-content: space-between;
@@ -1291,6 +1307,7 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
     align-items: center;
     gap: var(--gap-24);
   }
+  /*Decisión de mejorar el hover del figma*/
   header#header > div#cabecera > #nav-desktop > ul > li:hover {
     border-bottom: 2px solid var(--rosa-hover);
     color: #9f7ba8;
@@ -1303,6 +1320,7 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
     min-width: 16.875rem;
     min-height: 6.25rem;
   }
+  /*Menu de idiomas, decisión de ponerlo en columna en lugar de figma, para mantener criterio de accesibilidad de consistencia*/
   li#idioma-desktop {
     position: relative;
   }
@@ -1349,7 +1367,7 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
     font-family: var(--texto);
   }
   .idioma-dropdown li a:hover {
-    background-color: #9f7ba8;
+    border-bottom: 1px solid #9f7ba8;
   }
   .idioma-dropdown > li > a > img {
     width: 1.5rem;
@@ -1376,12 +1394,12 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
     min-height: 50px;
     line-height: 42px;
   }
-
+  /*Contact*/
   .sectionContact {
     display: flex;
     flex-flow: row;
     max-width: 100%;
-    padding: 4rem 6rem;
+    padding: 6rem 6rem;
     gap: 4rem;
   }
   .contactMp {
@@ -1416,7 +1434,7 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
   .contactItem > div {
     gap: var(--gap-8);
   }
-
+  /*footer*/
   .footerMp {
     padding-block: 3rem;
   }
@@ -1429,5 +1447,81 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
     display: flex;
     flex-flow: column;
     width: 100%;
+  }
+
+  /*Botones nav mas anchos, decisión de mantenerlos en escritorio para mantener buena accesibilidad y usabilidad*/
+  .bottomNavBtn {
+    min-width: 300px;
+    min-height: 50px;
+  }
+
+  /*Catalogo de articulos y servicios*/
+  article.catalogCard {
+    padding-block: 2rem;
+    gap: 1rem;
+  }
+  p.catalogSubtitle {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  h1.catalogCardTitle,
+  h2.h2-catalog {
+    font-size: 3rem;
+    line-height: 3.625rem;
+  }
+  p.catalogCardText {
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+  }
+  img.catalogCardImg {
+    min-width: 37.5rem;
+    min-height: 25rem;
+  }
+
+  /*Reservas*/
+  .formStepIntro,
+  .carrusel,
+  .calendarioReserva,
+  .horariosReserva,
+  .reservaDatos,
+  .reservaConfirmacion {
+    width: min(90%, 700px);
+    margin-inline: auto;
+  }
+  section.formStepIntro {
+    width: 100%;
+    gap: var(--gap-16);
+  }
+  p.text-sec {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  h1.formStepTitle {
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+  }
+  p.formStepText {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  section.carrusel {
+    padding-block: 1rem;
+    width: 50%;
+  }
+  /*Reservas 1º paso*/
+  fieldset.formServicios {
+    width: 50%;
+  }
+  div.formServiciosOption > label {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  span.formServiciosOption {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .formServiciosTitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
