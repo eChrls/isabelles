@@ -64,14 +64,9 @@
           </div>
         </div>
       </section>
-
+      <!--formulario con id=reserva-dtos-form con inputs con id y name -->
       <section class="reservaDatos" aria-label="Formulario de contacto">
-        <form
-          id="reserva-datos-form"
-          class="d-flex fd-col gap-18"
-          action="reservas-4.html"
-          method="get"
-        >
+        <form id="reserva-datos-form" class="d-flex fd-col gap-18">
           <div class="d-flex fd-col gap-8">
             <label class="reservaDatosLabel txt-14" for="reserva-nombre"
               >Nombre Completo *</label
@@ -174,8 +169,8 @@
           <span>ANTERIOR</span>
         </a>
         <button
-          type="submit"
-          form="reserva-datos-form"
+          type="button"
+          id="btn-confirmar"
           class="flex-center bottomNavBtn bottomNavBtnPink bottomNavBtnWideText"
           aria-label="Confirmar reserva"
         >
@@ -196,5 +191,34 @@
       <a href="legal.html" class="footerLink txt-14">Aviso legal</a>
       <a href="cookies.html" class="footerLink txt-14">Politica de cookies</a>
     </footer>
+    <script>
+      const formulario = document.getElementById("reserva-datos-form");
+      const btnConfirmar = document.getElementById("btn-confirmar");
+      btnConfirmar.addEventListener("click", function () {
+        const nombre = document.getElementById("reserva-nombre").value.trim();
+        const email = document.getElementById("reserva-email").value.trim();
+        const telefono = document
+          .getElementById("reserva-telefono")
+          .value.trim();
+        const mensaje = document.getElementById("reserva-mensaje").value.trim();
+        const privacidad =
+          document.getElementById("reserva-privacidad").checked;
+        // Validamos que los campos obligatorios estén rellenos
+        // El CSS ya muestra los errores con :user-invalid,
+        // pero comprobamos manualmente por si acaso
+        if (!nombre || !email || !telefono || !privacidad) {
+          return;
+        }
+
+        // Si todo ok, guardamos en localStorage
+        localStorage.setItem("reserva_nombre", nombre);
+        localStorage.setItem("reserva_email", email);
+        localStorage.setItem("reserva_telefono", telefono);
+        localStorage.setItem("reserva_mensaje", mensaje);
+
+        // Navegamos al paso 4
+        window.location.href = "reservas-4.html";
+      });
+    </script>
   </body>
 </html>

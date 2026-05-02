@@ -64,7 +64,7 @@
           </div>
         </div>
       </section>
-
+      <!-- formulario de servicio, cada servicio tiene id y label de titulo-->
       <fieldset
         class="formServicios d-flex fd-col gap-16"
         aria-label="Seleccion de servicio"
@@ -271,5 +271,31 @@
       <a href="legal.html" class="footerLink txt-14">Aviso legal</a>
       <a href="cookies.html" class="footerLink txt-14">Politica de cookies</a>
     </footer>
+    <script>
+      const btnSiguiente = document.querySelector('a[href="reservas-2.html"]');
+
+      btnSiguiente.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Buscamos qué radio está seleccionado
+        const servicioSeleccionado = document.querySelector(
+          'input[name="servicio"]:checked',
+        );
+
+        // Leemos el texto del título dentro de su label
+        const idServicio = servicioSeleccionado.id;
+        const labelServicio = document.querySelector(
+          'label[for="' + idServicio + '"]',
+        );
+        const textoServicio = labelServicio.querySelector(
+          ".formServiciosTitle",
+        ).textContent;
+
+        // Lo guardamos en localStorage
+        localStorage.setItem("reserva_servicio", textoServicio);
+
+        window.location.href = "reservas-2.html";
+      });
+    </script>
   </body>
 </html>

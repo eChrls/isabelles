@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-/* Variables globales del sistema */
+/* Variables globales del sistema mobile first */
 :root {
   --rosa: #bd95c5;
   --rosa-hover: #9f7ba8;
@@ -309,7 +309,7 @@ p {
   width: 30px;
   height: 30px;
 }
-
+/*accesibilidad por teclado*/
 :focus-visible {
   outline: var(--focus-outline);
   outline-offset: 2px;
@@ -417,11 +417,10 @@ p {
   padding: var(--gap-16);
   gap: var(--gap-16);
 }
-
-#menu-toggle:checked ~ #cabecera {
+/*desplegable abierto*/
+#menu-toggle:checked {
   display: none;
 }
-
 #menu-toggle:checked ~ #menu-backdrop {
   display: block;
   position: fixed;
@@ -432,7 +431,6 @@ p {
   background-color: rgba(59, 58, 50, 0.35);
   z-index: 20;
 }
-
 #menu-toggle:checked ~ #menu {
   display: flex;
   position: fixed;
@@ -463,51 +461,6 @@ p {
   border-bottom: 1px solid #f0efed;
 }
 
-#menu-idioma {
-  display: grid;
-  grid-template-columns: 1fr 22px;
-  align-items: center;
-  width: 100%;
-  padding: 0;
-  row-gap: 6px;
-}
-
-#menu-idioma::before {
-  content: "Idioma";
-  display: block;
-  font-family: var(--titulo);
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 500;
-  color: var(--negro);
-  grid-column: 1;
-  grid-row: 1;
-  padding-block: var(--gap-16);
-  border-bottom: 1px solid #f0efed;
-}
-
-#menu-idioma::after {
-  content: "";
-  display: block;
-  width: 22px;
-  height: 15px;
-  background-image: url("../assets/gallery/icons/abajo-rosa-hover.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  justify-self: end;
-  grid-column: 2;
-  grid-row: 1;
-}
-
-#menu-idioma li {
-  grid-column: 1 / -1;
-}
-
-#menu-idioma li a {
-  padding-block: var(--gap-8);
-}
-
 #menu > a.btn-rosa {
   width: 250px;
   min-height: 44px;
@@ -532,7 +485,32 @@ p {
   padding-block: var(--gap-8);
   text-align: left;
 }
+/*menu idiomas desplegable*/
+#menu-idioma {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  gap: 6px;
+}
 
+#menu-idioma li a {
+  padding-block: var(--gap-8);
+}
+
+.boton-idioma {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  padding-block: var(--gap-16);
+  border-bottom: 1px solid #f0efed;
+}
+
+.boton-idioma .idioma-arrow {
+  transition: transform 0.2s ease;
+}
 /* Secciones visuales de portada */
 .section {
   width: 100vw;
@@ -543,13 +521,13 @@ p {
   flex-direction: column;
   align-items: center;
 }
-
+/*gestion de imagenes de main page, cubriendo el total de espacio y con transparencia.*/
 .imgMp {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
+/*se usa linear gradient porque solo afecta al fondo, opacity afecta a todos los elementos*/
 .imgMp-welcome {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
@@ -688,7 +666,8 @@ p {
   color: var(--blanco);
   text-decoration: underline;
 }
-
+/*Navegacion movil fija*/
+/*Ajustes de espacio: El tamaño de la pagina es variable, y el contenido del footer se tapa con el nav*/
 .hasBottomNav + .bottomNav + .footerMp {
   padding-bottom: 96px;
 }
@@ -708,8 +687,8 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
 .hasBottomNav {
   padding-bottom: 72px;
 }
-
-/* Navegacion inferior fija */
+/* Composicion navegacion inferior*/
+/*Tras pruebas se modifica el figma para mejorar la accesibilidad y usabilidad, pasando de botones encima del footer a nav inferior fijo.*/
 .bottomNav {
   position: fixed;
   left: 0;
@@ -980,13 +959,13 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
   display: none;
   color: #8f1010;
 }
-
+/*:user-invalid marca el campo como invalido si detecta error tras interaccion del usuario*/
 .reservaDatosInput:user-invalid,
 .reservaDatosTextarea:user-invalid,
 .reservaDatosInput[type="email"]:invalid:not(:placeholder-shown) {
   border-color: var(--rojo);
 }
-
+/* Muestra el párrafo de error que por defecto está display:none */
 .reservaDatosInput:user-invalid + .reservaDatosError,
 .reservaDatosTextarea:user-invalid + .reservaDatosError {
   display: block;

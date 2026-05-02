@@ -52,25 +52,23 @@
           <div class="mt-12 d-flex fd-col gap-10">
             <div class="d-flex ai-baseline jc-between gap-12">
               <p class="reservaResumenKey txt-14">Servicio:</p>
-              <p class="reservaResumenValue txt-16 lh-20 fw-400">
-                Hairstroke Cejas
-              </p>
+              <p class="reservaResumenValue txt-16 lh-20 fw-400"></p>
             </div>
             <div class="d-flex ai-baseline jc-between gap-12">
               <p class="reservaResumenKey txt-14">Fecha:</p>
-              <p class="reservaResumenValue txt-16 lh-20 fw-400">
-                Martes, 12 Nov 2025
-              </p>
+              <p class="reservaResumenValue txt-16 lh-20 fw-400"></p>
             </div>
             <div class="d-flex ai-baseline jc-between gap-12">
               <p class="reservaResumenKey txt-14">Hora:</p>
-              <p class="reservaResumenValue txt-16 lh-20 fw-400">17:00</p>
+              <p class="reservaResumenValue txt-16 lh-20 fw-400"></p>
             </div>
             <div class="d-flex ai-baseline jc-between gap-12">
-              <p class="reservaResumenKey txt-14">Contacto:</p>
-              <p class="reservaResumenValue txt-16 lh-20 fw-400">
-                +34 612 345 678
-              </p>
+              <p class="reservaResumenKey txt-14">Teléfono:</p>
+              <p class="reservaResumenValue txt-16 lh-20 fw-400"></p>
+            </div>
+            <div class="d-flex ai-baseline jc-between gap-12">
+              <p class="reservaResumenKey txt-14">Email:</p>
+              <p class="reservaResumenValue txt-16 lh-20 fw-400"></p>
             </div>
           </div>
         </div>
@@ -120,5 +118,40 @@
       <a href="legal.html" class="footerLink txt-14">Aviso legal</a>
       <a href="cookies.html" class="footerLink txt-14">Politica de cookies</a>
     </footer>
+    <script>
+      console.log(localStorage.getItem("reserva_nombre"));
+      console.log(localStorage.getItem("reserva_telefono"));
+      console.log(localStorage.getItem("reserva_email"));
+      // Leemos todo lo guardado en localStorage
+      const servicio = localStorage.getItem("reserva_servicio");
+      const dia = localStorage.getItem("reserva_dia");
+      const hora = localStorage.getItem("reserva_hora");
+      const nombre = localStorage.getItem("reserva_nombre");
+      const telefono = localStorage.getItem("reserva_telefono");
+      const email = localStorage.getItem("reserva_email");
+
+      // Buscamos los elementos del resumen por su clase y posición
+      const valores = document.querySelectorAll(".reservaResumenValue");
+
+      // El orden en el HTML es: Servicio, Fecha, Hora, Teléfono y Email
+      valores[0].textContent = servicio || "No seleccionado";
+      valores[1].textContent = "Enero 2026, día " + dia;
+      valores[2].textContent = hora || "No seleccionado";
+      valores[3].textContent = telefono || "No seleccionado";
+      valores[4].textContent = email || "No seleccionado";
+
+      // También actualizamos el título con el nombre
+      const titulo = document.querySelector(".reservaConfirmacionTitle");
+      titulo.textContent = "Reserva confirmada, " + nombre;
+
+      // Limpio localStorage al llegar a la confirmación
+      localStorage.removeItem("reserva_servicio");
+      localStorage.removeItem("reserva_dia");
+      localStorage.removeItem("reserva_hora");
+      localStorage.removeItem("reserva_nombre");
+      localStorage.removeItem("reserva_email");
+      localStorage.removeItem("reserva_telefono");
+      localStorage.removeItem("reserva_mensaje");
+    </script>
   </body>
 </html>

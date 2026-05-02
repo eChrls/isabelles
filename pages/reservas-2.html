@@ -63,7 +63,7 @@
           </div>
         </div>
       </section>
-
+      <!--calendario de citas con horas, igual que en servicios con id y ahora con name-->
       <section class="calendarioReserva" aria-label="Calendario de reserva">
         <h2 class="txt-sec txt-14 ta-center">ENERO 2026</h2>
 
@@ -466,5 +466,34 @@
       <a href="legal.html" class="footerLink txt-14">Aviso legal</a>
       <a href="cookies.html" class="footerLink txt-14">Politica de cookies</a>
     </footer>
+    <script>
+      const btnSiguiente = document.querySelector('a[href="reservas-3.html"]');
+
+      btnSiguiente.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Leemos el día seleccionado
+        const diaSeleccionado = document.querySelector(
+          'input[name="fecha"]:checked',
+        );
+        const textoDia = document
+          .querySelector('label[for="' + diaSeleccionado.id + '"]')
+          .textContent.trim();
+
+        // Leemos la hora
+        const horaSeleccionada = document.querySelector(
+          'input[name="hora"]:checked',
+        );
+        const textoHora = document
+          .querySelector('label[for="' + horaSeleccionada.id + '"]')
+          .textContent.trim();
+
+        // Guardamos en localStorage porque es un proyecto de estudios. Habría que usar una base de datos real, pero para pruebas es suficiente.
+        localStorage.setItem("reserva_dia", textoDia);
+        localStorage.setItem("reserva_hora", textoHora);
+
+        window.location.href = "reservas-3.html";
+      });
+    </script>
   </body>
 </html>

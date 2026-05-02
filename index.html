@@ -418,5 +418,36 @@
         >Politica de cookies</a
       >
     </footer>
+    <script>
+      // Desplegable menu idiomas version movil y tablet
+      const menuIdioma = document.getElementById("menu-idioma");
+      const botonIdioma = document.createElement("button");
+      botonIdioma.className = "txt-titulo-24 link-menu boton-idioma";
+
+      // Texto y icono de flecha
+      botonIdioma.innerHTML = `
+    Idioma
+    <img src="assets/gallery/icons/abajo-rosa-hover.svg" alt="" class="icon-15 idioma-arrow" />
+  `;
+
+      // Al principio la lista de idiomas está oculta
+      menuIdioma.style.display = "none";
+
+      // Al hacer clic, mostramos u ocultamos la lista y giramos la flecha
+      botonIdioma.addEventListener("click", function () {
+        const flecha = botonIdioma.querySelector(".idioma-arrow");
+
+        if (menuIdioma.style.display === "none") {
+          menuIdioma.style.display = "flex";
+          flecha.style.transform = "rotate(180deg)";
+        } else {
+          menuIdioma.style.display = "none";
+          flecha.style.transform = "rotate(0deg)";
+        }
+      });
+
+      // Insertamos el botón justo antes de la lista de idiomas
+      menuIdioma.before(botonIdioma);
+    </script>
   </body>
 </html>
