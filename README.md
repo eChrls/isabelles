@@ -47,6 +47,44 @@ El menú de idiomas cuando se agregue javascript, será dinámico. Al estar el i
 
 Para conseguir dar realismo y trasladar de la manera más fiel posible esta composición web. Se deplegó la web para ver los efectos reales desde navegadores móviles y de escritorio a través del dominio https://isabelles.duckdns.org/index.html .
 
+**Entrega Escritorio + Javascript Mayo 2026**
+
+### CSS Escritorio `@media (min-width: 1024px)`
+
+- **Header**: se ocultan con `display: none` el hamburger, el logo centrado y el botón reservar móvil, y se activa el `#nav-desktop` que estaba oculto en mobile
+- **Nav escritorio**: el `#nav-desktop` usa `position: relative` y su `<ul>` de enlaces usa `position: absolute` con `left: 50% + translateX(-50%)` para conseguir un centrado perfecto independiente del logo y el botón de reservar
+- **Hover de enlaces**: se mejoró respecto al diseño original de Figma añadiendo `border-bottom` y color rosa en el hover de los `<li>`
+- **Menú de idiomas desktop**: se implementó con un checkbox oculto (`#idioma-toggle`) y CSS puro. Se decidió mostrar el dropdown en columna en lugar de como aparecía en Figma, para mantener consistencia de accesibilidad con el resto del proyecto
+- **Secciones principales**: escalado de tipografía en `.titleMp`, `.textMp` y `.btnMp` para pantallas grandes
+- **Sección contacto**: cambia a `flex-row` en escritorio con padding de `6rem`
+- **Footer**: se amplía el padding y los links se reorganizan
+- **BottomNav**: se decidió mantener los botones nav flotantes en versión escritorio ampliando su ancho mínimo a `300px`, priorizando accesibilidad y usabilidad sobre estética
+- **Catálogo**: escalado de tipografía e imágenes en `.catalogCard` para escritorio
+- **Reservas**: los bloques del flujo se limitan a `min(90%, 700px)` y se centra el fieldset de servicios al 50% del ancho
+
+### HTML añadido en index.html
+
+- Se añadió el bloque `#nav-desktop` dentro de `#cabecera` con logo, enlaces de navegación, dropdown de idioma con banderas y botón "Reservar Cita"
+- Se añadió el script del menú de idiomas móvil al final del `<body>`
+
+### Refactorización CSS
+
+- Eliminados los pseudoelementos `::before` y `::after` de `#menu-idioma` que simulaban el encabezado "Idioma" con flecha mediante CSS puro
+- Simplificado el bloque `body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage` fusionándolo directamente en `.catalogPage` y eliminado el bloque específico `body.reservaPage2 :is(.calSemana, .calGrid)`
+
+### Javascript añadido
+
+- **Menú idioma móvil**: botón creado dinámicamente con JS que muestra/oculta la lista de idiomas con animación de flecha giratoria, consistente con el comportamiento del menú de idioma en escritorio que usa CSS puro con checkbox
+- **Flujo de reservas**:
+  - Paso 1: guarda el nombre del servicio seleccionado al pulsar "Siguiente"
+  - Paso 2: guarda el día y la hora seleccionados al pulsar "Siguiente"
+  - Paso 3: valida los campos obligatorios y guarda nombre, email, teléfono y mensaje al pulsar "Confirmar"
+  - Paso 4: lee todos los datos guardados y los pinta dinámicamente en el resumen
+  - Se usa `localStorage` por ser la solución más sencilla sin necesidad de servidor, adecuada para un proyecto de estudios
+  - El botón "Confirmar" del paso 3 se cambió de `type="submit"` a `type="button"` y se eliminó el `action` y `method` del formulario para evitar que el navegador hiciera el submit nativo ignorando el JS
+  - Los valores hardcodeados del resumen en el paso 4 se vaciaron para que el JS los rellene dinámicamente
+  - El resumen del paso 4 se amplió con una fila separada para teléfono y otra para email
+
 ## 5- Webgrafía
 
 Los bancos de imágenes que más me han servido has sido unplash y pexels. Y las palabras a usar para encontrarlas has sido:
