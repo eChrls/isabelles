@@ -1233,12 +1233,12 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
     text-align: center;
   }
 
-  body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
+  .catalogPage {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
+  /*ajustes responsive*/
   .formStepIntro,
   .carrusel,
   .calendarioReserva,
@@ -1247,11 +1247,6 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
   .reservaConfirmacion {
     width: min(90%, 600px);
     margin-inline: auto;
-  }
-
-  body.reservaPage2 :is(.calSemana, .calGrid) {
-    min-width: var(--w-content-md);
-    width: 70%;
   }
 
   body.reservaPage4 .reservaResumenCard {
