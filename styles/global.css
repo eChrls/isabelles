@@ -770,11 +770,11 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
   height: 86px;
 }
 
-.catalogPage {
-  width: 100%;
-  margin: 0 auto;
-  padding: 16px var(--gap-24) 40px;
-  background-color: transparent;
+
+body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Flujo de reservas */
@@ -838,7 +838,7 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
 
 .calSemana,
 .calGrid {
-  width: 297px;
+  width: 100%;
   margin: 10px auto 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -954,29 +954,25 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
   outline: var(--focus-outline);
   outline-offset: 1px;
 }
-
+/*Refactorizacion, cambio :invalid:not del css y paso el controlador al JS*/
 .reservaDatosError {
   display: none;
   color: #8f1010;
 }
-/*:user-invalid marca el campo como invalido si detecta error tras interaccion del usuario*/
-.reservaDatosInput:user-invalid,
-.reservaDatosTextarea:user-invalid,
-.reservaDatosInput[type="email"]:invalid:not(:placeholder-shown) {
+.reservaDatosInput.error,
+.reservaDatosTextarea.error {
   border-color: var(--rojo);
 }
-/* Muestra el párrafo de error que por defecto está display:none */
-.reservaDatosInput:user-invalid + .reservaDatosError,
-.reservaDatosTextarea:user-invalid + .reservaDatosError {
+
+.reservaDatosInput.error + .reservaDatosError,
+.reservaDatosTextarea.error + .reservaDatosError {
   display: block;
 }
 
-.reservaDatosInput[type="email"]:invalid:not(:placeholder-shown)
-  + .reservaDatosError {
-  display: block;
-  color: var(--rojo);
+.reservaDatosCheckInput.error {
+  outline: 2px solid var(--rojo);
+  outline-offset: 2px;
 }
-
 .reservaDatosCheck {
   border-radius: 8px;
   padding: 2px;
@@ -999,10 +995,6 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
   outline-offset: 2px;
 }
 
-.reservaDatosCheckInput:user-invalid {
-  outline: 2px solid var(--rojo);
-  outline-offset: 2px;
-}
 
 .reservaConfirmacion {
   width: min(100%, var(--w-form));
@@ -1233,11 +1225,11 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
     text-align: center;
   }
 
-  .catalogPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   /*ajustes responsive*/
   .formStepIntro,
   .carrusel,
