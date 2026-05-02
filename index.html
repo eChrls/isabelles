@@ -15,24 +15,20 @@
         ><strong>Academic project</strong> # This website is a study exercise
         and is not related to any real brand.</em
       >
-      <button onclick="this.parentElement.remove()" aria-label="Cerrar aviso">
+      <button
+        type="button"
+        onclick="this.parentElement.remove()"
+        aria-label="Cerrar aviso"
+      >
         X
       </button>
     </div>
     <header id="header">
       <input type="checkbox" id="menu-toggle" aria-label="Abrir menú" />
-      <label
-        for="menu-toggle"
-        id="menu-backdrop"
-        aria-label="Cerrar menú"
-      ></label>
+      <label for="menu-toggle" id="menu-backdrop"></label>
 
       <div id="cabecera">
-        <label
-          for="menu-toggle"
-          id="hamburguesa"
-          aria-label="Abrir menú de navegación"
-        >
+        <label for="menu-toggle" id="hamburguesa">
           <img
             src="assets/gallery/icons/hamgurguesa.svg"
             alt="menu"
