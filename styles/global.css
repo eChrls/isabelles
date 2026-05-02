@@ -1499,3 +1499,21 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
     line-height: 2rem;
   }
 }
+#aviso-estudio {
+  background-color: var(--negro);
+  color: var(--blanco);
+  font-family: var(--texto);
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 40px;
+  position: relative;
+}
+
+#aviso-estudio button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--blanco);
+  opacity: 0.6;
+}
