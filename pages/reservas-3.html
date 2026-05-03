@@ -112,8 +112,10 @@
   </footer>
   <script>
     /*Cogemos elementos del formulario*/
+    console.log("script activo");
     const btnConfirmar = document.getElementById("btn-confirmar");
     btnConfirmar.addEventListener("click", function () {
+      console.log("boton activo");
       const nombre = document.getElementById("reserva-nombre");
       const email = document.getElementById("reserva-email");
       const telefono = document.getElementById("reserva-telefono");

@@ -770,7 +770,6 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
   height: 86px;
 }
 
-
 body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
   display: flex;
   flex-direction: column;
@@ -995,7 +994,6 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
   outline-offset: 2px;
 }
 
-
 .reservaConfirmacion {
   width: min(100%, var(--w-form));
   margin: 22px auto 0;
@@ -1219,17 +1217,6 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
     margin-bottom: 2px;
   }
 
-  .footerLink {
-    display: inline-block;
-    white-space: nowrap;
-    text-align: center;
-  }
-
-body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
   /*ajustes responsive*/
   .formStepIntro,
   .carrusel,
