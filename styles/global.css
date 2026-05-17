@@ -21,6 +21,7 @@
   --gap-24: 1.5rem;
   --header-h: 4.5rem;
   --focus-outline: 0.125rem solid var(--rosa-hover);
+  --bottom-nav-h: 4.375rem; /* 70px - altura de la navegacion fija */
 }
 
 /* Reset base y tipografia global */
@@ -669,23 +670,13 @@ p {
 /*Navegacion movil fija*/
 /*Ajustes de espacio: El tamaño de la pagina es variable, y el contenido del footer se tapa con el nav*/
 .hasBottomNav + .bottomNav + .footerMp {
-  padding-bottom: 6rem;
-}
-
-body.reservaPage2 .hasBottomNav + .bottomNav + .footerMp {
-  padding-bottom: 4.75rem;
-}
-
-body.reservaPage3 .hasBottomNav + .bottomNav + .footerMp {
-  padding-bottom: 3.25rem;
-}
-
-body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
-  padding-bottom: 2.75rem;
+  padding-bottom: calc(var(--bottom-nav-h) + 1.5rem); /* nav + margen para no pisar el footer */
 }
 
 .hasBottomNav {
-  padding-bottom: 4.5rem;
+  padding-bottom: var(--bottom-nav-h);
+   min-height: calc(100vh - 6.25rem - var(--bottom-nav-h));
+  /*fix para ajustar altura, 100vh menos el headerSimple (6.25rem) menos el nav fijo */
 }
 /* Composicion navegacion inferior*/
 /*Tras pruebas se modifica el figma para mejorar la accesibilidad y usabilidad, pasando de botones encima del footer a nav inferior fijo.*/
