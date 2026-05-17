@@ -10,17 +10,17 @@
   --rojo: #8f1010;
   --gris: #9d9c98;
   --gris-hover: #d9d9d9;
-  --w-content-md: 320px;
-  --w-content-sm: 300px;
-  --w-form: 335px;
+  --w-content-md: 20rem;
+  --w-content-sm: 18.75rem;
+  --w-form: 20.9375rem;
   --titulo: "Cormorant", Georgia, serif;
   --texto: "Inter", Arial, sans-serif;
-  --fs-16: 16px;
-  --gap-8: 8px;
-  --gap-16: 16px;
-  --gap-24: 24px;
-  --header-h: 72px;
-  --focus-outline: 2px solid var(--rosa-hover);
+  --fs-16: 1rem;
+  --gap-8: 0.5rem;
+  --gap-16: 1rem;
+  --gap-24: 1.5rem;
+  --header-h: 4.5rem;
+  --focus-outline: 0.125rem solid var(--rosa-hover);
 }
 
 /* Reset base y tipografia global */
@@ -91,8 +91,8 @@ textarea {
 h1,
 h2 {
   font-family: var(--titulo);
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 h1 {
@@ -105,16 +105,16 @@ h2 {
 
 p {
   font-size: var(--fs-16);
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 /* Utilidades */
 .lh-20 {
-  line-height: 20px;
+  line-height: 1.25rem;
 }
 
 .lh-24 {
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .fw-400 {
@@ -177,11 +177,11 @@ p {
 }
 
 .gap-2 {
-  gap: 2px;
+  gap: 0.125rem;
 }
 
 .gap-4 {
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .gap-8 {
@@ -189,11 +189,11 @@ p {
 }
 
 .gap-10 {
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .gap-12 {
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .gap-16 {
@@ -201,23 +201,23 @@ p {
 }
 
 .gap-18 {
-  gap: 18px;
+  gap: 1.125rem;
 }
 
 .gap-32 {
-  gap: 32px;
+  gap: 2rem;
 }
 
 .mt-12 {
-  margin-top: 12px;
+  margin-top: 0.75rem;
 }
 
 .mt-6 {
-  margin-top: 6px;
+  margin-top: 0.375rem;
 }
 
 .minh-52 {
-  min-height: 52px;
+  min-height: 3.25rem;
 }
 
 .txt-sec {
@@ -225,35 +225,35 @@ p {
 }
 
 .icon-30-flex {
-  width: 30px;
-  height: 30px;
-  flex: 0 0 30px;
+  width: 1.875rem;
+  height: 1.875rem;
+  flex: 0 0 1.875rem;
 }
 
 /* Componentes */
 .txt-titulo-24 {
   font-family: var(--titulo);
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 500;
 }
 
 .txt-titulo-16 {
   font-family: var(--titulo);
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
 }
 
 .txt-16 {
   font-family: var(--texto);
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .txt-14 {
   font-family: var(--texto);
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 400;
 }
 
@@ -269,7 +269,7 @@ p {
 
 .link-menu:hover {
   color: var(--rosa-hover);
-  border-bottom: 1px solid var(--rosa-hover);
+  border-bottom: 0.0625rem solid var(--rosa-hover);
 }
 
 .btn {
@@ -277,12 +277,12 @@ p {
   align-items: center;
   justify-content: center;
   gap: var(--gap-8);
-  min-height: 44px;
+  min-height: 2.75rem;
   padding: 0 var(--gap-24);
-  border-radius: 10px;
+  border-radius: 0.625rem;
   font-family: var(--texto);
   font-size: var(--fs-16);
-  line-height: 20px;
+  line-height: 1.25rem;
   font-weight: 400;
   transition:
     background-color 0.2s ease,
@@ -292,7 +292,7 @@ p {
 .btn-rosa {
   background-color: var(--rosa);
   color: var(--negro);
-  border: 2px solid var(--rosa);
+  border: 0.125rem solid var(--rosa);
 }
 
 .btn-rosa:hover {
@@ -301,18 +301,18 @@ p {
 }
 
 .icon-15 {
-  width: 15px;
-  height: 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 .icon-30 {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 /*accesibilidad por teclado*/
 :focus-visible {
   outline: var(--focus-outline);
-  outline-offset: 2px;
+  outline-offset: 0.125rem;
 }
 
 /* Header principal y menu desplegable */
@@ -340,7 +340,7 @@ p {
   justify-content: space-between;
   position: relative;
   height: var(--header-h);
-  padding-inline: 8px;
+  padding-inline: 0.5rem;
 }
 
 #logo,
@@ -357,8 +357,8 @@ p {
 }
 
 #hamburguesa img {
-  width: 24px;
-  height: 38px;
+  width: 1.5rem;
+  height: 2.375rem;
 }
 
 #logo {
@@ -368,20 +368,20 @@ p {
 }
 
 #logo img {
-  width: 240px;
-  height: 72px;
+  width: 15rem;
+  height: 4.5rem;
 }
 
 #btn-reservar {
   flex-direction: column;
-  width: 63px;
-  height: 44px;
-  min-height: 44px;
-  padding: 0 4px;
-  gap: 1px;
-  border-radius: 10px;
-  font-size: 10px;
-  line-height: 12px;
+  width: 3.9375rem;
+  height: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0 0.25rem;
+  gap: 0.0625rem;
+  border-radius: 0.625rem;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
   white-space: nowrap;
 }
 
@@ -394,8 +394,8 @@ p {
 }
 
 #btn-reservar img {
-  width: 15px;
-  height: 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 #hamburguesa,
@@ -413,7 +413,7 @@ p {
   width: 100%;
   height: auto;
   background-color: var(--fondo);
-  border-top: 1px solid #f0efed;
+  border-top: 0.0625rem solid #f0efed;
   padding: var(--gap-16);
   gap: var(--gap-16);
 }
@@ -437,7 +437,7 @@ p {
   top: 0;
   left: 0;
   width: 40%;
-  min-width: 300px;
+  min-width: 18.75rem;
   max-width: 40%;
   min-height: 100vh;
   overflow-y: auto;
@@ -445,43 +445,43 @@ p {
 }
 
 #menu-logo img {
-  width: 270px;
-  height: 65px;
+  width: 16.875rem;
+  height: 4.0625rem;
 }
 
 #menu-logo {
   display: block;
-  width: 270px;
-  padding: 16px 24px;
+  width: 16.875rem;
+  padding: 1rem 1.5rem;
 }
 
 #menu-lista li a {
   display: block;
   padding-block: var(--gap-16);
-  border-bottom: 1px solid #f0efed;
+  border-bottom: 0.0625rem solid #f0efed;
 }
 
 #menu > a.btn-rosa {
-  width: 250px;
-  min-height: 44px;
-  padding: 0 12px;
+  width: 15.625rem;
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
   justify-content: center;
   text-align: center;
 }
 
 #menu > a.btn-rosa img {
-  width: 15px;
-  height: 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 #menu-redes {
   width: 100%;
-  padding: 16px 0;
+  padding: 1rem 0;
 }
 
 #menu-redes li a {
-  min-height: 36px;
-  padding-left: 8px;
+  min-height: 2.25rem;
+  padding-left: 0.5rem;
   padding-block: var(--gap-8);
   text-align: left;
 }
@@ -491,7 +491,7 @@ p {
   flex-direction: column;
   width: 100%;
   padding: 0;
-  gap: 6px;
+  gap: 0.375rem;
 }
 
 #menu-idioma li a {
@@ -505,7 +505,7 @@ p {
   width: 100%;
   text-align: left;
   padding-block: var(--gap-16);
-  border-bottom: 1px solid #f0efed;
+  border-bottom: 0.0625rem solid #f0efed;
 }
 
 .boton-idioma .idioma-arrow {
@@ -514,9 +514,9 @@ p {
 /* Secciones visuales de portada */
 .section {
   width: 100vw;
-  min-height: 611px;
+  min-height: 38.1875rem;
   margin: 0;
-  padding: 17px 0 150px;
+  padding: 1.0625rem 0 9.375rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -559,28 +559,28 @@ p {
 }
 
 .titleMp {
-  min-height: 119px;
+  min-height: 7.4375rem;
   width: 100%;
   text-align: center;
 }
 
 .textMp {
-  width: 305px;
-  min-height: 60px;
+  width: 19.0625rem;
+  min-height: 3.75rem;
   margin-top: 0;
   background: rgba(255, 255, 255, 0.5);
 }
 
 .btnMp {
-  width: 250px;
-  min-height: 44px;
+  width: 15.625rem;
+  min-height: 2.75rem;
   margin-top: auto;
-  border: 1px solid var(--negro);
+  border: 0.0625rem solid var(--negro);
   background-color: var(--negro);
   color: #ffffff;
   font-family: var(--titulo);
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   text-align: center;
 }
 
@@ -591,54 +591,54 @@ p {
 /* Bloque de contacto */
 .sectionContact {
   width: 100%;
-  min-height: 555px;
+  min-height: 34.6875rem;
   margin: 0 auto;
-  padding: 32px var(--gap-24) 24px;
+  padding: 2rem var(--gap-24) 1.5rem;
   background-color: var(--fondo);
 }
 
 .contactTop {
-  min-height: 250px;
+  min-height: 15.625rem;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.75rem;
   width: 100%;
 }
 
 .contactMp {
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
   font-family: var(--texto);
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
   font-weight: 400;
 }
 
 .btnContact {
-  width: 166px;
-  min-height: 40px;
-  margin: 8px auto 0;
-  padding: 12px 24px;
-  border-radius: 8px;
+  width: 10.375rem;
+  min-height: 2.5rem;
+  margin: 0.5rem auto 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   background-color: var(--rosa);
   color: var(--negro);
   font-family: var(--texto);
-  font-size: 14px;
-  line-height: 16px;
-  gap: 8px;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  gap: 0.5rem;
 }
 
 .btnContact img {
-  width: 13px;
-  height: 13px;
+  width: 0.8125rem;
+  height: 0.8125rem;
 }
 
 .contactList {
-  margin-top: 28px;
+  margin-top: 1.75rem;
 }
 
 .contactItem {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .contactLabel {
@@ -649,12 +649,12 @@ p {
 /* Footer compartido */
 .footerMp {
   width: 100%;
-  min-height: 198px;
+  min-height: 12.375rem;
   margin: 0 auto;
-  padding: 24px var(--gap-24);
+  padding: 1.5rem var(--gap-24);
   background-color: var(--negro);
   color: var(--blanco);
-  gap: 8px;
+  gap: 0.5rem;
   text-align: center;
 }
 
@@ -669,23 +669,23 @@ p {
 /*Navegacion movil fija*/
 /*Ajustes de espacio: El tamaño de la pagina es variable, y el contenido del footer se tapa con el nav*/
 .hasBottomNav + .bottomNav + .footerMp {
-  padding-bottom: 96px;
+  padding-bottom: 6rem;
 }
 
 body.reservaPage2 .hasBottomNav + .bottomNav + .footerMp {
-  padding-bottom: 76px;
+  padding-bottom: 4.75rem;
 }
 
 body.reservaPage3 .hasBottomNav + .bottomNav + .footerMp {
-  padding-bottom: 52px;
+  padding-bottom: 3.25rem;
 }
 
 body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
-  padding-bottom: 44px;
+  padding-bottom: 2.75rem;
 }
 
 .hasBottomNav {
-  padding-bottom: 72px;
+  padding-bottom: 4.5rem;
 }
 /* Composicion navegacion inferior*/
 /*Tras pruebas se modifica el figma para mejorar la accesibilidad y usabilidad, pasando de botones encima del footer a nav inferior fijo.*/
@@ -694,36 +694,36 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 10px 0;
+  padding: 0.625rem 0;
   background-color: rgba(249, 248, 246, 0.5);
 }
 
 .bottomNavList {
-  width: min(100%, 375px);
+  width: min(100%, 23.4375rem);
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .bottomNavBtn {
-  width: 153px;
-  height: 46px;
-  padding: 8px 8px;
-  border-radius: 10px;
-  border: 1px solid transparent;
+  width: 9.5625rem;
+  height: 2.875rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.625rem;
+  border: 0.0625rem solid transparent;
   font-family: var(--titulo);
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   font-weight: 500;
   text-transform: uppercase;
   color: var(--negro);
-  gap: 6px;
+  gap: 0.375rem;
 }
 
 .bottomNavBtnWideText {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   text-align: center;
 }
 
@@ -743,21 +743,21 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
 }
 
 .bottomNavIcon {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 20px;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 1.25rem;
 }
 
 .bottomNavIconSm {
-  width: 15px;
-  height: 15px;
-  flex: 0 0 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  flex: 0 0 0.9375rem;
 }
 
 /* Cabecera simple para paginas internas */
 .headerSimple {
   width: 100%;
-  min-height: 100px;
+  min-height: 6.25rem;
   margin: 0 auto;
   background-color: var(--blanco);
   position: sticky;
@@ -766,8 +766,8 @@ body.reservaPage4 .hasBottomNav + .bottomNav + .footerMp {
 }
 
 .logoSimple img {
-  width: 288px;
-  height: 86px;
+  width: 18rem;
+  height: 5.375rem;
 }
 
 
@@ -785,7 +785,7 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 
 .formServicios {
   width: min(100%, var(--w-content-sm));
-  margin: 24px auto 0;
+  margin: 1.5rem auto 0;
   border: none;
 }
 
@@ -804,26 +804,26 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 }
 
 .formServiciosCard {
-  min-height: 116px;
-  padding: 18px;
-  border: 1px solid #cecac4;
-  border-radius: 12px;
+  min-height: 7.25rem;
+  padding: 1.125rem;
+  border: 0.0625rem solid #cecac4;
+  border-radius: 0.75rem;
   background-color: var(--blanco);
 }
 
 .formServiciosTitle {
   font-family: var(--titulo);
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 600;
 }
 
 .formServiciosThumb {
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   object-fit: cover;
-  border-radius: 8px;
-  flex: 0 0 80px;
+  border-radius: 0.5rem;
+  flex: 0 0 5rem;
 }
 
 .formServiciosRadio:checked + .formServiciosCard {
@@ -833,30 +833,30 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 
 .calendarioReserva {
   width: min(100%, var(--w-content-sm));
-  margin: 24px auto 0;
+  margin: 1.5rem auto 0;
 }
 
 .calSemana,
 .calGrid {
   width: 100%;
-  margin: 10px auto 0;
+  margin: 0.625rem auto 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 2px;
+  gap: 0.125rem;
 }
 
 .calDiaOption {
-  min-height: 45px;
+  min-height: 2.8125rem;
 }
 
 .calDiaVacio {
-  min-height: 45px;
+  min-height: 2.8125rem;
 }
 
 .calDiaLabel {
-  min-height: 45px;
-  border: 1px solid var(--fondo);
-  border-radius: 8px;
+  min-height: 2.8125rem;
+  border: 0.0625rem solid var(--fondo);
+  border-radius: 0.5rem;
   background-color: var(--fondo);
   color: var(--negro);
   text-align: center;
@@ -876,26 +876,26 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 .calDiaRadio:focus-visible + .calDiaLabel,
 .horarioRadio:focus-visible + .horarioLabel {
   outline: var(--focus-outline);
-  outline-offset: 1px;
+  outline-offset: 0.0625rem;
 }
 
 .horariosReserva {
   width: min(100%, var(--w-content-md));
-  margin: 24px auto 0;
-  padding-top: 16px;
-  border-top: 1px solid var(--gris-hover);
+  margin: 1.5rem auto 0;
+  padding-top: 1rem;
+  border-top: 0.0625rem solid var(--gris-hover);
 }
 
 .horariosGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
+  gap: 0.375rem;
 }
 
 .horarioLabel {
-  border: 1px solid var(--gris-hover);
-  border-radius: 8px;
-  padding: 15px 13px;
+  border: 0.0625rem solid var(--gris-hover);
+  border-radius: 0.5rem;
+  padding: 0.9375rem 0.8125rem;
   background-color: transparent;
   color: var(--negro);
   text-align: center;
@@ -908,8 +908,8 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 }
 
 .horarioNoDisponible {
-  padding: 15px 13px;
-  border-radius: 8px;
+  padding: 0.9375rem 0.8125rem;
+  border-radius: 0.5rem;
   background-color: #e7e4de;
   color: var(--gris);
   text-align: center;
@@ -918,29 +918,29 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 
 .carrusel {
   width: min(100%, var(--w-content-md));
-  margin: 22px auto 0;
+  margin: 1.375rem auto 0;
 }
 
 .carruselItem {
-  width: 70px;
+  width: 4.375rem;
 }
 
 .reservaDatos {
   width: min(100%, var(--w-form));
-  margin: 24px auto 0;
+  margin: 1.5rem auto 0;
 }
 
 .reservaDatosInput,
 .reservaDatosTextarea {
-  border: 1px solid var(--gris-hover);
-  border-radius: 8px;
+  border: 0.0625rem solid var(--gris-hover);
+  border-radius: 0.5rem;
   background-color: var(--fondo);
   color: var(--negro);
-  padding: 15px 13px;
+  padding: 0.9375rem 0.8125rem;
 }
 
 .reservaDatosTextarea {
-  min-height: 120px;
+  min-height: 7.5rem;
   resize: vertical;
 }
 
@@ -952,7 +952,7 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 .reservaDatosInput:focus-visible,
 .reservaDatosTextarea:focus-visible {
   outline: var(--focus-outline);
-  outline-offset: 1px;
+  outline-offset: 0.0625rem;
 }
 /*Refactorizacion, cambio :invalid:not del css y paso el controlador al JS*/
 .reservaDatosError {
@@ -970,20 +970,20 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 }
 
 .reservaDatosCheckInput.error {
-  outline: 2px solid var(--rojo);
-  outline-offset: 2px;
+  outline: 0.125rem solid var(--rojo);
+  outline-offset: 0.125rem;
 }
 .reservaDatosCheck {
-  border-radius: 8px;
-  padding: 2px;
+  border-radius: 0.5rem;
+  padding: 0.125rem;
 }
 
 .reservaDatosCheckInput {
-  width: 16px;
-  height: 16px;
-  margin-top: 2px;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.125rem;
   accent-color: var(--rosa-hover);
-  flex: 0 0 16px;
+  flex: 0 0 1rem;
 }
 
 .reservaDatosCheckLink {
@@ -992,31 +992,31 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 
 .reservaDatosCheckInput:focus-visible {
   outline: var(--focus-outline);
-  outline-offset: 2px;
+  outline-offset: 0.125rem;
 }
 
 
 .reservaConfirmacion {
   width: min(100%, var(--w-form));
-  margin: 22px auto 0;
+  margin: 1.375rem auto 0;
 }
 
 .reservaConfirmacionIcon {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
 }
 
 .reservaConfirmacionText {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .reservaResumenCard {
   width: var(--w-form);
-  min-height: 245px;
-  margin-top: 16px;
-  padding: 16px;
-  border: 1px solid var(--gris-hover);
-  border-radius: 12px;
+  min-height: 15.3125rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 0.0625rem solid var(--gris-hover);
+  border-radius: 0.75rem;
   background-color: transparent;
 }
 
@@ -1027,41 +1027,41 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 
 /* Paginas legales */
 .legalPage {
-  padding-top: 24px;
+  padding-top: 1.5rem;
 }
 
 .h1Legal {
   text-align: center;
   font-family: var(--titulo);
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: 600;
 }
 
 .legalTextBlock {
   width: 70%;
   min-width: var(--w-content-md);
-  min-height: 1001px;
-  margin: 57px auto 0;
-  padding: 24px 22px;
-  border-radius: 6px;
+  min-height: 62.5625rem;
+  margin: 3.5625rem auto 0;
+  padding: 1.5rem 1.375rem;
+  border-radius: 0.375rem;
   background-color: var(--gris);
 }
 
 .legalText {
   font-family: var(--texto);
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   font-weight: 400;
 }
 
 .legalText + .legalText {
-  margin-top: 14px;
+  margin-top: 0.875rem;
 }
 
 /* Catalogo de productos y servicios */
 .catalogCards {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .catalogCard {
@@ -1080,48 +1080,48 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 }
 
 .catalogCardImg {
-  margin-top: 12px;
+  margin-top: 0.75rem;
   object-fit: cover;
 }
 
 /* Ajustes responsive tablet */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .icon-15 {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   .bottomNavIconSm {
-    width: 20px;
-    height: 20px;
-    flex: 0 0 20px;
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 1.25rem;
   }
 
   .bottomNavIcon {
-    width: 30px;
-    height: 30px;
-    flex: 0 0 30px;
+    width: 1.875rem;
+    height: 1.875rem;
+    flex: 0 0 1.875rem;
   }
 
   #hamburguesa img {
-    width: 36px;
-    height: 56px;
+    width: 2.25rem;
+    height: 3.5rem;
   }
 
   #btn-reservar {
     width: auto;
-    min-width: 146px;
-    padding: 0 12px;
-    gap: 8px;
+    min-width: 9.125rem;
+    padding: 0 0.75rem;
+    gap: 0.5rem;
     flex-direction: row;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   #btn-reservar img {
-    width: 20px;
-    height: 20px;
-    flex: 0 0 20px;
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 1.25rem;
   }
 
   .btnReservarHeaderLabelMobile {
@@ -1131,36 +1131,36 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
   .btnReservarHeaderLabelDesktop {
     display: inline;
     font-family: var(--texto);
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-weight: 400;
     white-space: nowrap;
   }
 
   #menu > a.btn-rosa img {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   .bottomNavBtn {
-    width: 266px;
-    height: 50px;
-    min-height: 48px;
-    border-radius: 4px;
-    padding: 15px 29px;
-    gap: 8px;
-    border-width: 1px;
+    width: 16.625rem;
+    height: 3.125rem;
+    min-height: 3rem;
+    border-radius: 0.25rem;
+    padding: 0.9375rem 1.8125rem;
+    gap: 0.5rem;
+    border-width: 0.0625rem;
   }
 
   .formServicios {
-    width: min(100%, 340px);
+    width: min(100%, 21.25rem);
   }
 
   .sectionContact {
     width: 100%;
-    max-width: 768px;
-    min-height: 352px;
-    padding: 32px 24px;
+    max-width: 48rem;
+    min-height: 22rem;
+    padding: 2rem 1.5rem;
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     column-gap: 10rem;
@@ -1168,19 +1168,19 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
   }
 
   .contactTop {
-    min-height: 288px;
+    min-height: 18rem;
     justify-content: space-between;
-    gap: 14px;
+    gap: 0.875rem;
   }
 
   .btnContact {
-    margin: 14px auto 0;
+    margin: 0.875rem auto 0;
   }
 
   .contactList {
     margin-top: 0;
     justify-content: space-between;
-    gap: 12px;
+    gap: 0.75rem;
   }
 
   .contactItem {
@@ -1189,15 +1189,15 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 
   .catalogCards {
     width: 100%;
-    max-width: 620px;
+    max-width: 38.75rem;
     margin-left: auto;
     margin-right: auto;
   }
 
   .catalogCard {
     width: 58vw;
-    max-width: 560px;
-    min-width: 340px;
+    max-width: 35rem;
+    min-width: 21.25rem;
   }
 
   .catalogCardImg,
@@ -1211,12 +1211,12 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 0.75rem;
   }
 
   .footerCopy {
     flex: 0 0 100%;
-    margin-bottom: 2px;
+    margin-bottom: 0.125rem;
   }
 
   .footerLink {
@@ -1237,7 +1237,7 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
   .horariosReserva,
   .reservaDatos,
   .reservaConfirmacion {
-    width: min(90%, 600px);
+    width: min(90%, 37.5rem);
     margin-inline: auto;
   }
 
@@ -1248,7 +1248,7 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
   }
 }
 /* Ajustes responsive escritorio */
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   /*header*/
   div#cabecera > label,
   a#logo,
@@ -1275,7 +1275,7 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
   }
   /*Decisión de mejorar el hover del figma*/
   header#header > div#cabecera > #nav-desktop > ul > li:hover {
-    border-bottom: 2px solid var(--rosa-hover);
+    border-bottom: 0.125rem solid var(--rosa-hover);
     color: #9f7ba8;
   }
   a#btn-reservar-desktop > span {
@@ -1319,9 +1319,9 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
   .idioma-dropdown {
     display: none;
     position: absolute;
-    top: calc(100% + 8px);
+    top: calc(100% + 0.5rem);
     background-color: var(--fondo);
-    padding: 8px 0;
+    padding: 0.5rem 0;
     min-width: 10rem;
   }
   .idioma-dropdown li a {
@@ -1333,7 +1333,7 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
     font-family: var(--texto);
   }
   .idioma-dropdown li a:hover {
-    border-bottom: 1px solid #9f7ba8;
+    border-bottom: 0.0625rem solid #9f7ba8;
   }
   .idioma-dropdown > li > a > img {
     width: 1.5rem;
@@ -1341,13 +1341,13 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 
   /*main*/
   .titleMp {
-    font-size: 48px;
+    font-size: 3rem;
     max-width: 60%;
     line-height: 3.625rem;
     padding-top: 4rem;
   }
   .textMp {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 2rem;
     width: 60%;
     margin-top: 3rem;
@@ -1355,10 +1355,10 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
     padding-top: 1rem;
   }
   .btnMp {
-    font-size: 20px;
-    min-width: 300px;
-    min-height: 50px;
-    line-height: 42px;
+    font-size: 1.25rem;
+    min-width: 18.75rem;
+    min-height: 3.125rem;
+    line-height: 2.625rem;
   }
   /*Contact*/
   .sectionContact {
@@ -1417,8 +1417,8 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
 
   /*Botones nav mas anchos, decisión de mantenerlos en escritorio para mantener buena accesibilidad y usabilidad*/
   .bottomNavBtn {
-    min-width: 300px;
-    min-height: 50px;
+    min-width: 18.75rem;
+    min-height: 3.125rem;
   }
 
   /*Catalogo de articulos y servicios*/
@@ -1451,7 +1451,7 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
   .horariosReserva,
   .reservaDatos,
   .reservaConfirmacion {
-    width: min(90%, 700px);
+    width: min(90%, 43.75rem);
     margin-inline: auto;
   }
   section.formStepIntro {
@@ -1495,15 +1495,15 @@ body:is(.reservaPage2, .reservaPage3, .reservaPage4) .catalogPage {
   background-color: var(--negro);
   color: var(--blanco);
   font-family: var(--texto);
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
-  padding: 10px 40px;
+  padding: 0.625rem 2.5rem;
   position: relative;
 }
 
 #aviso-estudio button {
   position: absolute;
-  right: 15px;
+  right: 0.9375rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--blanco);
