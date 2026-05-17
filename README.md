@@ -1,4 +1,20 @@
-# Composición frontend de página web Isabelles
+# Composición frontend de página web Isabelles por Carlos Torralvo
+**Proyecto Final Diseño I.E.S. Mar de Alborán**
+
+
+## 1º Clona este repositorio https://github.com/eChrls/isabelles
+
+## 2º Estructura:
+  Raíz: .gitignore, index.html, README.md, styles/, pages/, assets/, .vscode/ y .git/.
+    assets/docs: Guía de estilos en DOCX, PDF y el mapa de navegación.
+    assets/gallery/icons: colección de SVGs de iconos y logos.
+    assets/gallery/images: imágenes grandes (WebGrafía en este ReadMem punto 5).
+    assets/gallery/thumbnails: miniaturas para las secciones.
+    pages: cookies.html, legal.html, privacidad.html, products.html, reservas-1.html a reservas-4.html y services.html
+    styles: global.css
+
+## 3º Despliega en local o visita la web https://isabelles.duckdns.org/index.html
+
 
 **Entrega Móvil y Tablet 01/04/2026**
 
@@ -23,7 +39,8 @@ En esta composición se ha utilizado como herramienta la inteligencia artificial
 - Para los efectos de CSS más complejos que no encontré otra manera de conseguir (ejemplo uso de clases :placeholder :invalid:not o efecto de cerrar menú desplegable pinchando fuera usando un label extra).
 - Para la composición correcta de los formularios con estilos específicos que no conocía (ejemplos: outline, resize, usos correctos de grid, pointer-events...).
 - Tratamiento de todo el volumen de información de estilos de figma y encontrar los estilos base para las variables sobre todo en espacios y márgenes.
-- Refactorización y organización del código. Encontrar patrones y estilos repetidos y unificarlos.
+- Refactorización y organización del código. Encontrar patrones y estilos repetidos y unificarlos. Y refactorización de px a rem del documento de estilos.
+- Documentación de la sintaxis de Javascript.
 
 Todo estos usos me han servido para aprender de su existencia y de como se aplican.
 
@@ -46,6 +63,8 @@ El menú de idiomas cuando se agregue javascript, será dinámico. Al estar el i
 ## 4- Web
 
 Para conseguir dar realismo y trasladar de la manera más fiel posible esta composición web. Se deplegó la web para ver los efectos reales desde navegadores móviles y de escritorio a través del dominio https://isabelles.duckdns.org/index.html .
+
+Desde el despliegue he podido hacer todos los ajustes necesarios de manera más precisa.
 
 **Entrega Escritorio + Javascript Mayo 2026**
 
